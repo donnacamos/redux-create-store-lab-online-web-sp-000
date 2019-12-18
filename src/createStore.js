@@ -1,18 +1,18 @@
 export default function createStore(reducer) {
-  let state 
+  let state
 
   function getState() {
-    return state 
+    return state
   }
 
   function dispatch(action){
     state = reducer(state, action)
   }
 
-  dispatch({type: "@@INIT"}) 
+  dispatch({type: "@@INIT"})
 
   return {
-    getState, 
-    
+    getState,
+
   }
 }
