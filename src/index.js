@@ -41,5 +41,15 @@ function render() {
   }
 };
 
+function countReducer(state = 0, action) {
+  switch (action.type) {
+    case 'INCREMENT_COUNT':
+      return state + 1;
+    case 'DECREMENT_COUNT':
+      return state - 1;
+    default:
+      return state;
+  }
+}
 // use your createStore function and the functions provided here to create a store
 // once the store is created, call an initial dispatch
